@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Приглашение на свадьбу Сарсембая и Альбины | 10 октября 2026</title>
+    <meta name="description" content="Свадьба Сарсембая и Альбины. 10 октября 2026. Ресторан Золотое руно" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'TildaSans', Arial, sans-serif;
+            color: #fff9f0;
+            min-height: 100vh;
+        }
+
+        /* === ФОНОВОЕ ИЗОБРАЖЕНИЕ === */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+            .background-image img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
+
+        /* Лёгкое затемнение поверх фона для читаемости текста */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        /* Основной контейнер */
+        .invitation {
+            max-width: 800px;
+            margin: 0 auto;
+            background: transparent;
+            position: relative;
+            z-index: 1;
+            padding: 20px 0;
+        }
+
+        /* Секции — ПРОЗРАЧНЫЕ, с размытием фона, с рамками */
+        .section {
+            padding: 50px 40px;
+            margin: 20px 20px;
+            text-align: center;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+            .section:hover {
+                border-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(14px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            }
+
+        /* Герой-секция с именами */
+        .hero {
+            background: transparent;
+            backdrop-filter: blur(12px);
+            padding: 70px 40px;
+            margin: 20px 20px;
+            border-radius: 32px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+            .hero:hover {
+                border-color: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(16px);
+            }
+
+            .hero::before {
+                content: "✨";
+                position: absolute;
+                font-size: 200px;
+                opacity: 0.1;
+                bottom: -50px;
+                right: -50px;
+                transform: rotate(-15deg);
+                pointer-events: none;
+            }
+
+            .hero::after {
+                content: "💕";
+                position: absolute;
+                font-size: 150px;
+                opacity: 0.08;
+                top: -40px;
+                left: -40px;
+                pointer-events: none;
+            }
+
+        .names {
+            font-size: 72px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #fff9f0;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+            .names span {
+                font-weight: 600;
+                color: #f0d6a8;
+            }
+
+        .amp {
+            font-size: 48px;
+            font-family: 'Georgia', serif;
+            color: #f0d6a8;
+            margin: 0 15px;
+        }
+
+        .wedding-title {
+            font-size: 32px;
+            letter-spacing: 8px;
+            color: #fff9f0;
+            margin-top: 30px;
+            font-weight: 300;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+        }
+
+        .date {
+            font-size: 28px;
+            color: #f0d6a8;
+            margin-top: 20px;
+            font-weight: 400;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+        }
+
+        /* Заголовки секций */
+        .section-title {
+            font-size: 28px;
+            color: #f0d6a8;
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #f0d6a8, transparent);
+            }
+
+        /* Текст */
+        .greeting-text {
+            font-size: 22px;
+            line-height: 1.5;
+            color: #fff9f0;
+            max-width: 500px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+
+        .message-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff9f0;
+            max-width: 550px;
+            margin: 20px auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+
+        .highlight {
+            color: #f0d6a8;
+            font-weight: 600;
+        }
+
+        /* Инфо-блоки */
+        .info-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background: transparent;
+            backdrop-filter: blur(8px);
+            padding: 25px 35px;
+            border-radius: 20px;
+            min-width: 200px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+            .info-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(12px);
+            }
+
+        .info-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #f0d6a8;
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff9f0;
+        }
+
+        /* Кнопка */
+        .map-button {
+            display: inline-block;
+            background: rgba(240, 214, 168, 0.9);
+            color: #4a3a2a;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+            .map-button:hover {
+                background: #f0d6a8;
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+        /* Таймлайн */
+        .timeline {
+            max-width: 400px;
+            margin: 30px auto 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            margin: 5px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+            .timeline-item:hover {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(4px);
+            }
+
+        .timeline-time {
+            font-weight: 700;
+            color: #f0d6a8;
+            font-size: 18px;
+        }
+
+        .timeline-event {
+            color: #fff9f0;
+            font-size: 16px;
+        }
+
+        /* Dress code цвета */
+        .dress-colors {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .color-item {
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+            .color-item:hover {
+                transform: scale(1.05);
+            }
+
+        .color-dot {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 2px solid rgba(255,255,255,0.8);
+        }
+
+        .color-beige {
+            background: #f5e6d3;
+        }
+
+        .color-sage {
+            background: #9baf77;
+        }
+
+        .color-terracotta {
+            background: #e27b58;
+        }
+
+        .color-label {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #fff9f0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Пожелания блок */
+        .wishes-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .wish-card {
+            background: transparent;
+            backdrop-filter: blur(8px);
+            padding: 25px 20px;
+            border-radius: 20px;
+            width: 220px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+            .wish-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(12px);
+            }
+
+        .wish-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .wish-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #f0d6a8;
+            margin-bottom: 10px;
+        }
+
+        .wish-text {
+            font-size: 14px;
+            color: #fff9f0;
+            line-height: 1.4;
+        }
+
+        /* Футер */
+        .footer {
+            background: transparent;
+            backdrop-filter: blur(12px);
+            padding: 50px 40px;
+            margin: 20px 20px;
+            text-align: center;
+            border-radius: 32px;
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-names {
+            font-size: 42px;
+            color: #fff9f0;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+        }
+
+        .footer-text {
+            font-size: 20px;
+            color: #f0d6a8;
+            font-style: italic;
+        }
+
+        /* Анимации */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes softGlow {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(240, 214, 168, 0.3);
+            }
+
+            50% {
+                text-shadow: 0 0 25px rgba(240, 214, 168, 0.6);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.7s ease-out forwards;
+            opacity: 0;
+        }
+
+        .hero .names {
+            animation: softGlow 3s ease-in-out infinite;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            .section {
+                padding: 35px 25px;
+                margin: 15px 15px;
+            }
+
+            .hero {
+                padding: 45px 25px;
+                margin: 15px 15px;
+            }
+
+            .footer {
+                margin: 15px 15px;
+                padding: 35px 25px;
+            }
+
+            .names {
+                font-size: 42px;
+            }
+
+            .amp {
+                font-size: 28px;
+            }
+
+            .wedding-title {
+                font-size: 20px;
+                letter-spacing: 4px;
+            }
+
+            .date {
+                font-size: 20px;
+            }
+
+            .greeting-text {
+                font-size: 18px;
+            }
+
+            .footer-names {
+                font-size: 28px;
+            }
+
+            .info-card, .wish-card {
+                padding: 18px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ФОНОВОЕ ИЗОБРАЖЕНИЕ -->
+    <div class="background-image">
+        <!-- ⬇️⬇️⬇️ ВСТАВЬТЕ ВАШ ПУТЬ К ФОТОГРАФИИ ЗДЕСЬ ⬇️⬇️⬇️ -->
+        <img src="C:\Users\Huawei\Desktop\свадьба\images\EL414JHgkz1409mmF6QoTHcOHm-Tribz1D0fWTjHuOZZsJdmacNrPsTivG5EU097yJsGV4thM1l40bBQhw1TPczA.jpg" alt="Фон свадьбы" />
+        <!-- ⬆️⬆️⬆️ ЗАМЕНИТЕ НА СВОЙ ПУТЬ ⬆️⬆️⬆️ -->
+    </div>
+    <div class="overlay"></div>
+
+    <div class="invitation">
+
+        <!-- ГЕРОЙ-СЕКЦИЯ с именами -->
+        <div class="hero animate" style="animation-delay: 0s;">
+            <div class="names">
+                Сарсембай <span class="amp">&amp;</span> Альбина
+            </div>
+            <div class="wedding-title">СВАДЬБА</div>
+            <div class="date">✨ 10 ОКТЯБРЯ 2026 ✨</div>
+        </div>
+
+        <!-- ПРИВЕТСТВИЕ -->
+        <div class="section animate" style="animation-delay: 0.1s;">
+            <div class="section-title">Дорогие гости!</div>
+            <div class="greeting-text">
+                Мы хотим, чтобы в этот день рядом с нами были самые близкие и дорогие для нас люди.
+            </div>
+            <div class="message-text">
+                Будем рады разделить с вами чудесный праздник в день нашей свадьбы,
+                которая состоится <span class="highlight">10 октября 2026 года</span>.
+            </div>
+        </div>
+
+        <!-- МЕСТО ПРОВЕДЕНИЯ -->
+        <div class="section animate" style="animation-delay: 0.2s;">
+            <div class="section-title">Место проведения</div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🍽️</div>
+                    <div class="info-label">РЕСТОРАН</div>
+                    <div class="info-value">"ЗОЛОТОЕ РУНО"</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div class="info-label">АДРЕС</div>
+                    <div class="info-value">Волгоград,<br />ул. Мира, 15</div>
+                </div>
+            </div>
+            <a href="https://yandex.ru/maps/" class="map-button" target="_blank">
+                Построить маршрут →
+            </a>
+        </div>
+
+        <!-- ПРОГРАММА ВЕЧЕРА -->
+        <div class="section animate" style="animation-delay: 0.3s;">
+            <div class="section-title">Программа вечера</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-time">15:00</span>
+                    <span class="timeline-event">Сбор гостей</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">15:30</span>
+                    <span class="timeline-event">Торжественная церемония</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">17:00</span>
+                    <span class="timeline-event">Фуршет и поздравления</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">19:00</span>
+                    <span class="timeline-event">Банкет и танцы</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-time">22:00</span>
+                    <span class="timeline-event">Свадебный торт</span>
+                </div>
+            </div>
+            <div class="message-text" style="margin-top: 25px;">
+                💃 Вы станете очевидцами рождения новой семьи. Осторожно! Будет трогательно и весело! 🕺
+            </div>
+        </div>
+
+        <!-- DRESS CODE -->
+        <div class="section animate" style="animation-delay: 0.4s;">
+            <div class="section-title">Dress code</div>
+            <div class="message-text">
+                Мы будем благодарны, если вы поддержите цветовую гамму нашей свадьбы
+            </div>
+            <div class="dress-colors">
+                <div class="color-item">
+                    <div class="color-dot color-beige"></div>
+                    <div class="color-label">Бежевый</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-dot color-sage"></div>
+                    <div class="color-label">Шалфей</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-dot color-terracotta"></div>
+                    <div class="color-label">Терракота</div>
+                </div>
+            </div>
+            <div class="message-text" style="font-size: 14px;">
+                *Dress-code лишь ориентир. Если вам не откликнулся ни один из цветов,
+                будем рады видеть вас в нарядах пастельных природных оттенков, которые вам по душе!
+            </div>
+        </div>
+
+        <!-- Пожелания -->
+        <div class="section animate" style="animation-delay: 0.5s;">
+            <div class="section-title">Наши пожелания</div>
+            <div class="wishes-grid">
+                <div class="wish-card">
+                    <div class="wish-icon">🌿</div>
+                    <div class="wish-title">Вместо цветов</div>
+                    <div class="wish-text">Мы будем рады комнатным растениям в горшках — они украсят наш дом и будут радовать долгие годы</div>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">🍰</div>
+                    <div class="wish-title">Свадебный торт</div>
+                    <div class="wish-text">Приготовьте мелочь! Мы устроим продажу кусочков торта — это добрая традиция для приумножения семейного счастья</div>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">📸</div>
+                    <div class="wish-title">Фотографии</div>
+                    <div class="wish-text">Не забудьте свои улыбки и хорошее настроение — пусть этот день запомнится навсегда!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ФУТЕР -->
+        <div class="footer animate" style="animation-delay: 0.6s;">
+            <div class="footer-names">
+                Сарсембай &amp; Альбина
+            </div>
+            <div class="footer-text">
+                будем вас ждать с нетерпением! 💝
+            </div>
+            <div class="message-text" style="margin-top: 20px; font-size: 16px;">
+                Пожалуйста, сообщите о своём присутствии по телефону:<br />
+                <span class="highlight">+7 (999) 123-45-67</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Плавная анимация появления при скролле
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.animate');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+
+            setTimeout(() => {
+                animatedElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        el.style.animationPlayState = 'running';
+                    }
+                });
+            }, 100);
+        });
+
+        // Эффект сердечек при клике
+        document.body.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('.map-button')) return;
+
+            const heart = document.createElement('div');
+            heart.innerHTML = '💕';
+            heart.style.position = 'fixed';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.fontSize = '28px';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '9999';
+            heart.style.opacity = '1';
+            heart.style.transition = 'all 1s ease-out';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.style.opacity = '0';
+                heart.style.transform = 'translateY(-60px)';
+            }, 10);
+
+            setTimeout(() => heart.remove(), 1000);
+        });
+    </script>
+</body>
+</html>
